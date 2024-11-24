@@ -1,0 +1,527 @@
+#Requires AutoHotkey v2.0
+#SuspendExempt
+^!l::Suspend  ; Ctrl+Alt+S
+#SuspendExempt False
+
+;FUNCTIONALITY
+; This script maps Shift + _ (underscore) to act as the Tab key in AutoHotkey v2
++_:: {
+    Send("{Tab}")
+}
+
+;MOVE RIGHT
+^!f:: {
+    Send("{Right}")
+}
+
+;MOVE LEFT
+^!a:: {
+    Send("{Left}")
+}
+
+;MOVE DOWN
+^!s:: {
+    Send("{Down}")
+}
+
+;MOVE UP
+^!d:: {
+    Send("{Up}")
+}
+
+
+
+;END OF LINE
+^!;:: {
+    Send("{End}") ; Move cursor to the end of the line
+}
+
+
+
+^!p:: {
+    Send(" ") ; Move cursor to the end of the line
+}
+
+
+
+
+
+
+;[]
+:*:vrs:: {
+    Send("[") ; Sends the string "[]"
+}
+
+
+
+
+;FUNCTION NAME
+:*:nm:: {
+    Sleep(50) ; Delay to ensure VSCode processes previous commands
+
+    Send("def twoSum():")
+}
+
+:*:mn:: {
+    Sleep(50)
+    Send("{")
+    Send("def twoSum():")
+    Send("}")
+}
+
+
+;FUNCTION NAME2
+:*:nar:: {
+    Send("def isValid():")
+    Send("{Left 2}")
+}
+:*:nra::{
+    Send("def isValid():")
+    Send("{Left 2}")
+}
+:*:anr::{
+    Send("def isValid():")
+    Send("{Left 2}")
+}
+:*:arn::{
+    Send("def isValid():")
+    Send("{Left 2}")
+}
+:*:rna::{
+    Send("def isValid():")
+    Send("{Left 2}")
+}
+:*:ran::{
+    Send("def isValid():")
+    Send("{Left 2}")
+}
+
+
+;PARAMETER1
+:*:pm1::nums 
+:*:p1m::nums 
+:*:mp1::nums 
+:*:m1p::nums 
+:*:1pm::nums 
+:*:1mp::nums 
+
+;PARAMETER2
+:*:pm2::target 
+:*:p2m::target 
+:*:mp2::target 
+:*:m2p::target 
+:*:2pm::target 
+:*:2mp::target 
+
+
+
+
+;WORDS WORDS WORDS WORDS
+
+; Hotkey to type "complement"
+:*:com:: {
+    Send("complement")
+}
+:*:cmo:: {
+    Send("complement")
+}
+:*:ocm:: {
+    Send("complement")
+}
+:*:omc:: {
+    Send("complement")
+}
+:*:mco:: {
+    Send("complement")
+}
+:*:moc:: {
+    Send("complement")
+}
+
+
+
+
+
+; Hotstrings for each permutation to type "target"
+:*:tae:: {
+    Send("target")
+}
+:*:tea:: {
+    Send("target")
+}
+:*:ate:: {
+    Send("target")
+}
+:*:aet:: {
+    Send("target")
+}
+:*:eta:: {
+    Send("target")
+}
+:*:eat:: {
+    Send("target")
+}
+
+:*:sto::storage
+:*:sot::storage
+:*:tso::storage
+:*:tos::storage
+:*:ost::storage
+:*:ots::storage
+
+;RETURN
+:*:ren:: {
+    Send("return") ; Sends the string "return"
+}
+
+:*:rne:: {
+    Send("return") ; Sends the string "return"
+}
+
+:*:ern:: {
+    Send("return") ; Sends the string "return"
+}
+
+:*:enr:: {
+    Send("return") ; Sends the string "return"
+}
+
+:*:nre:: {
+    Send("return") ; Sends the string "return"
+}
+
+:*:ner:: {
+    Send("return") ; Sends the string "return"
+}
+
+;PRINT
+:*:pri:: {
+    Send("print()") ; Sends the string "print"
+}
+
+:*:pir:: {
+    Send("print()") ; Sends the string "print"
+    Send("{Left}")
+}
+
+:*:rpi:: {
+    Send("print()") ; Sends the string "print"
+    Send("{Left}")
+
+}
+
+:*:rip:: {
+    Send("print()") ; Sends the string "print"
+    Send("{Left}")
+}
+
+:*:ipr:: {
+    Send("print()") ; Sends the string "print"
+    Send("{Left}")
+}
+
+:*:irp:: {
+    Send("print()") ; Sends the string "print"
+    Send("{Left}")
+}
+
+;OFE
+:*:ofe:: {
+    Send("ofe") ; Sends the string "ofe"
+}
+
+:*:oef:: {
+    Send("ofe") ; Sends the string "ofe"
+}
+
+:*:foe:: {
+    Send("ofe") ; Sends the string "ofe"
+}
+
+:*:feo:: {
+    Send("ofe") ; Sends the string "ofe"
+}
+
+:*:eof:: {
+    Send("ofe") ; Sends the string "ofe"
+}
+
+:*:efo:: {
+    Send("ofe") ; Sends the string "ofe"
+}
+
+
+;IFN
+:*:ifn:: {
+    Send("ifn") ; Sends the string "ifn"
+}
+
+:*:inf:: {
+    Send("ifn") ; Sends the string "ifn"
+}
+
+:*:fin:: {
+    Send("ifn") ; Sends the string "ifn"
+}
+
+:*:fni:: {
+    Send("ifn") ; Sends the string "ifn"
+}
+
+:*:nif:: {
+    Send("ifn") ; Sends the string "ifn"
+}
+
+:*:nfi:: {
+    Send("ifn") ; Sends the string "ifn"
+}
+
+
+
+; Define hotstrings for permutations that type "number"
+:*:nmb:: {
+    Send("number")  
+}
+
+:*:nam:: {
+    Send("number")
+}
+
+:*:mna:: {
+    Send("number")
+}
+
+:*:man:: {
+    Send("number")
+}
+
+:*:anm:: {
+    Send("number")
+}
+
+:*:amn:: {
+    Send("number")
+}
+
+
+; Define hotstrings for permutations that type "index"
+:*:ind:: {
+    Send("index")  ; Sends the word "index"
+}
+
+:*:idn:: {
+    Send("index")
+}
+
+:*:nid:: {
+    Send("index")
+}
+
+:*:ndi:: {
+    Send("index")
+}
+
+:*:din:: {
+    Send("index")
+}
+
+:*:dni:: {
+    Send("index")
+}
+
+
+
+
+;ENGLISH WORDS
+
+; Hotstrings for each permutation to type "this"
+:*:THI:: {
+    Send("this ")
+}
+:*:TIH:: {
+    Send("this ")
+}
+:*:HTI:: {
+    Send("this ")
+}
+:*:HIT:: {
+    Send("this ")
+}
+:*:ITH:: {
+    Send("this ")
+}
+:*:IHT:: {
+    Send("this ")
+}
+
+; Hotstrings for each permutation to type "THE"
+:*:the:: {
+    Send("the ")
+}
+
+:*:teh:: {
+    Send("the ")
+}
+
+:*:hte:: {
+    Send("the ")
+}
+
+:*:het:: {
+    Send("the ")
+}
+
+:*:eth:: {
+    Send("the ")
+}
+
+:*:eht:: {
+    Send("the ")
+}
+
+
+
+
+
+; Hotstrings for each permutation to type "is"
+; Send "is" when specific key combinations are pressed
+:*:is-:: {
+    Send("is ")
+}
+
+:*:i-s:: {
+    Send("is ")
+}
+
+:*:si-:: {
+    Send("is ")
+}
+
+:*:s-i:: {
+    Send("is ")
+}
+
+:*:-is:: {
+    Send("is ")
+}
+
+:*:-si:: {
+    Send("is ")
+}
+
+
+;LIST
+:*:lis::list `
+:*:lsi::list `
+:*:ils::list `
+:*:isl::list `
+:*:sli::list `
+:*:sil::list `
+
+;INITIALIZE
+:*:inz::initialize `
+:*:izn::initialize `
+:*:niz::initialize `
+:*:nzi::initialize `
+:*:zin::initialize `
+:*:zni::initialize `
+
+;EMPTY
+:*:emp::empty `
+:*:epm::empty `
+:*:mep::empty `
+:*:mpe::empty `
+:*:pem::empty `
+:*:pme::empty `
+
+;OF
+:*:of-::of `
+:*:o-f::of `
+:*:fo-::of `
+:*:f-o::of `
+:*:-of::of `
+:*:-fo::of `
+
+;TO
+:*:to-::to `
+:*:t-o::to `
+:*:ot-::to `
+:*:o-t::to `
+:*:-to::to `
+:*:-ot::to `
+
+;USE
+:*:use::use `
+:*:ues::use `
+:*:sue::use `
+:*:seu::use `
+:*:eus::use `
+:*:esu::use `
+
+;AN-ARTICLE
+:*:an-::an `
+:*:a-n::an `
+:*:na-::an `
+:*:n-a::an `
+:*:-an::an `
+:*:-na::an `
+
+;A-ARTICLE
+:*:an4::a `
+:*:a4n::a `
+:*:na4::a `
+:*:n4a::a `
+:*:4an::a `
+:*:4na::a `
+
+
+;IT
+:*:it-::it `
+:*:i-t::it `
+:*:ti-::it `
+:*:t-i::it `
+:*:-it::it `
+:*:-ti::it `
+
+;AS
+:*:as-::as `
+:*:a-s::as `
+:*:sa-::as `
+:*:s-a::as `
+:*:-as::as `
+:*:-sa::as `
+
+;STACK
+:*:sta::stack `
+:*:sat::stack `
+:*:tsa::stack `
+:*:tas::stack `
+:*:ast::stack `
+:*:ats::stack `
+
+;FOR
+:*:fo1::for `
+:*:f1o::for `
+:*:of1::for `
+:*:o1f::for `
+:*:1fo::for `
+:*:1of::for `
+
+;TRACK
+:*:tra::track `
+:*:tar::track `
+:*:rta::track `
+:*:rat::track `
+:*:atr::track `
+:*:art::track `
+
+;TALK TO THE PERPLEXITY
+::sp::Simple leetcode problems and their solutions in python(functional style with type annotations)
+::cplm::Could you please make them work on press of the keyboard and only when i press uppercase letters
+::cpld::Could you please do the same as above for these permutations and type the word "def": 
+::cpls::could you please make it work on press with "*"
+::cplg::Could you please generate an ahk2 hotsring for the following permutations so that when i press it would type "she loves me"
+
+
+;command / complement/comment
+;this/thing
