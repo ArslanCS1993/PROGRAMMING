@@ -1,6 +1,8 @@
 def isValid(s):
     # Initialize an empty list to use as a stack for tracking opening brackets
     stack = []
+    storage=[]
+    
 
     # Create a mapping of closing brackets to their corresponding opening brackets
     mapping = {")": "(", "}": "{", "]": "["}
